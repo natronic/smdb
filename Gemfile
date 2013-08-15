@@ -47,4 +47,17 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # gem 'capistrano', group: :development
 
 # Use debugger
+
+group :production do
+  # Use Postgres for database
+  gem 'pg'
+  # Makes it easier for Rails to serve up assets
+  gem 'rails_12factor'
+end
+
+group :development do
+  # Use sqlite3as the database for Active Record
+  gem 'sqlite3'
+end
+
 # gem 'debugger', group: [:development, :test]
